@@ -3,5 +3,157 @@ layout: site
 title: Graham Babbitt
 ---  
 
-#home
-  %p This site is going to be built out shortly, but in the meantime feel free to<br /> check out my <a href="gbabbitt-resume.pdf">resume</a> or my <a href="http://www.linkedin.com/in/gmbabbitt">LinkedIn profile</a>.
+%header
+
+  %hgroup
+    %h1 Graham Babbitt
+    #email
+      %a
+      %a(href='gbabbitt-resume.pdf') Resume
+      
+
+#page
+
+
+
+  #intro-panel
+    %h2 I Make Websites
+    %p That's an intentionally broad statement.  Bringing an idea to an audience on the web takes many different technical skills, and I try to be conversant in all of them.
+    
+    %p Most of my work involves creating visually complex, interaction-rich sites for public facing products and services.  That said I'm comfortable working on a broad range of supporting activities, from project planning to performance tuning.
+    
+    %p Take a look at what I've worked on, and if you've got a challenging project that you think I could contribute to, let me know!
+  
+  #background-panel
+    %h2 Sites I've Worked On
+    %p I'm proud of what I've been able to build for these companies, and I'm always looking for something new and challenging to take on.
+    
+    .company.odd
+      %hgroup
+        %h3 
+          %a(href='http://turningart.com') TurningArt
+        .description A subscription service to find and rotate prints of independent art
+        
+      .image-container
+        %a(href='images/screenshots/ta/homepage.jpg' rel='shadowbox[ta]')
+          %img(src='images/screenshots/ta/thumb-home.jpg')
+        %a(href='images/screenshots/ta/browse.jpg' rel='shadowbox[ta]')
+          %img(src='images/screenshots/ta/thumb-browse.jpg')
+        %a(href='images/screenshots/ta/quiz.jpg' rel='shadowbox[ta]')
+          %img(src='images/screenshots/ta/thumb-quiz.jpg')
+        %a(href='images/screenshots/ta/artist.jpg' rel='shadowbox[ta]')
+          %img(src='images/screenshots/ta/thumb-artist.jpg')
+            
+      .summary
+        %h4.challenge 
+          %strong The Challenge:
+          Rapidly pivot the company into a new business model.  We had to lay the groundwork for making future iterative changes quickly and efficiently, while maintaining a compelling and rich site at a high quality level.
+          
+        %h4.solution What I Did:
+        %ul
+          %li Charted a series of architectural choices about the site's Rails codebase, ensuring that we had flexibility where we needed it, but that critical systems like email delivery and payment were well tested and reliable.
+          %li Used Bootstrap to establish an easy-to-change set of frontend conventions.  This let us both heavily customize some pages that were key to the business, while relying on effective out-of-the box behavior on more secondary pages.
+          %li Managed the systems and workflow behind collecting and curating hundreds of artists, and more than 10,000 individual pieces of art.  This involved using S3, custom image processing, and an internal administrative UI to keep things running smoothly.
+          
+    .company.even
+      %hgroup
+        %h3 38 Studios
+        .description Game development studio
+        
+      .image-container
+        %a(href='images/screenshots/38/home.jpg' rel='shadowbox[38]')
+          %img(src='images/screenshots/38/thumb-home.jpg')
+        %a(href='images/screenshots/38/map.jpg' rel='shadowbox[38]')
+          %img(src='images/screenshots/38/thumb-map.jpg')
+        %a(href='images/screenshots/38/society.jpg' rel='shadowbox[38]')
+          %img(src='images/screenshots/38/thumb-society.jpg')
+          
+      .summary
+        %h4.challenge 
+          %strong The Challenge:
+          Provide an engaging web presence for 38's titles, while handling often massive traffic spikes due to media attention, and allowing for daily content updates.
+          
+        %h4.solution What I Did:
+        %ul
+          %li Coordinated using Akamai as a CDN for all content and pages in an existing Drupal based site, while maintaining needed login and content management functionality.
+          %li Spearheaded the use of ruby-based static site generators for new development, while maintaining Drupal as a content store and revision tool.  This gave developers an easier and more flexible environment to make layout and styling changes, while giving writers and marketing teams access to the same tools they'd used previously.
+          %li Built an interactive zooming map that let players explore the game's world.  By using a mix of existing jQuery plugins and custom-written ones, we were able to achieve the effect on a rapid timetable while keeping the code maintanable and extensible.
+      
+    .company.odd
+      %hgroup
+        %h3 
+          %a(href='http://gazelle.com') Gazelle
+        .description A trade-in service for used consumer electronics
+        
+      .image-container
+        %a(href='images/screenshots/gz/home.jpg' rel='shadowbox[gz]')
+          %img(src='images/screenshots/gz/thumb-home.jpg')
+        %a(href='images/screenshots/gz/calc.jpg' rel='shadowbox[gz]')
+          %img(src='images/screenshots/gz/thumb-calc.jpg')
+          
+      .summary
+        %h4.challenge 
+          %strong The Challenge:
+          Maintain a conversion-tuned frontend for Gazelle's trade-in service as it underwent significant growth in both number of customers and degree of operational complexity.  Additionally, allow Gazelle's system to be custom-branded by external partners like Walmart, Amazon, and eBay.
+          
+        %h4.solution What I Did:
+        %ul
+          %li Lead frontend development efforts for two significant rebrandings of the public trade-in site.  Both were carefully usability tested and involved ensuring a smooth transition for existing customers.
+          %li Worked with the engineering team to transition the site from a monolithic codebase to a themeable frontend and an API-driven backend.  This allowed both to be more thoroughly tested as well as allowing external partner sites to share the same backend functionality.
+          %li Continually monitored and optimized the site's load time and server-side performance.
+          
+    .company.even
+      %hgroup
+        %h3 Other Sites
+        %p I've worked on a number of other projects that are either smaller, or were a relatively long time ago.  This includes everything from a parenting site about tweens to the "Official" William Shatner DVD Club.  If you're curious about the details feel free to reach out to me.
+        
+      .image-container
+        %a(href='images/screenshots/other/tweenparent.jpg' rel='shadowbox[ot]')
+          %img(src='images/screenshots/other/thumb-tweenparent.jpg')
+        %a(href='images/screenshots/other/classdrive.jpg' rel='shadowbox[ot]')
+          %img(src='images/screenshots/other/thumb-classdrive.jpg')
+        %a(href='images/screenshots/other/shatner.jpg' rel='shadowbox[ot]')
+          %img(src='images/screenshots/other/thumb-shatner.jpg')
+          
+  #skills-panel
+    %h2 My Skills
+    %p Web development is a rapidly changing field, and I wouldn't have it any other way.  That does mean that there's a lot to learn, and I do my best to keep up with the latest tools and techniques.
+    
+    .skill-group
+      %h3 Development
+      %dl.skill-items
+        %dt The Open Web
+        %dd HTML5, CSS3, Haml, Sass
+        
+        %dt JavaScript
+        %dd jQuery, CoffeScript, Backbone, etc
+        
+        %dt Ruby
+        %dd Rails, RVM, Gem Management, Modular Design
+        
+        %dt Databases
+        %dd MySQL, PostgreSQL
+        
+        %dt Environments and Hosting
+        %dd AWS, Virtualization, CDN's, Load Testing and Tuning
+        
+        %dt Version Control
+        %dd Git, GitHub, Clean Branching Practices
+        
+    .skill-group
+      %h3 Other Experience
+      %dl.skill-items
+        %dt Design
+        %dd Responsive Layouts, Web Typography, Image Editing, etc
+        
+        %dt Analysis
+        %dd Google Analytics, A/B Testing, Conversion Optimization, SEO, Usability Testing
+        
+        %dt Planning
+        %dd Agile/Scrum, Requirements Clarification, Scoping and Estimation
+        
+        %dt I've Dabbled With&hellip;
+        %dd Objective C and iOS Development, Node.js, Heroku, MongoDB, Drupal     
+  
+          
+          

@@ -1,9 +1,139 @@
 @import "compass";
 @import "normalize";
 
+$pageWidth: 800px;
+$pageGutter: 20px;
+$blue: #095aba;
+
 body {
-  width: 800px;
-  margin: 0 auto;
-  padding-top: 40px;
-  p{ text-align: center; }
+  background: url('/images/tiny_grid.png') top left repeat;
+  z-index: 1;
+  position: relative;
+  line-height: 1.6em;
+  font-size: 17px;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+#page-content {
+  position: relative;
+  max-width: $pageWidth;
+  margin: 70px auto;
+  color: #222;
+  padding: $pageGutter;
+  z-index: 2;
+  
+  h1, h2, h3, h4 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  
+  h1 {
+    color: $blue;
+  }
+  
+  h2 {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 60px;
+  }
+  
+  a {
+   color: #222; 
+  }
+  
+  .company {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba($blue, 0.6);
+    h3 {
+      color: #FFF;
+      margin: 0;
+      a { color: #FFF; text-decoration: none; }
+      font-size: 26px;
+    }
+  
+    .description {
+      font-style: italic;
+      color: #000;
+    }
+  
+    h4 {
+      font-weight: normal;
+      text-transform: none;
+      font-family: "PT Sans Narrow", sans-serif;
+      &.challenge strong, &.solution {
+        font-family: "Oswald", sans-serif;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: #FFF;
+        margin-right: 5px;
+      }
+    }
+    
+    ul {
+      margin-top: 0;
+      padding-left: 0px;
+      li {
+        margin-bottom: 10px;
+        margin-left: 25px;
+      }
+    }
+  }
+  
+}
+
+header {
+  background-color: #FFF;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  padding: 0 $pageGutter;
+  padding-bottom: 10px;
+  @include box-sizing( border-box );
+  @include box-shadow( 0 0 15px 2px rgba(#000, 0.4) );
+  
+  h1 {
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  
+  #email a {
+    margin-right: 5px;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+  }
+  hgroup {
+    max-width: $pageWidth;
+    margin: 0 auto;
+  }
+}
+
+.image-container {
+  a { text-decoration: none; }
+  
+  a img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-top: 10px;
+    @include box-shadow( 2px 2px 8px 1px rgba(#000, 0.5) );
+  }
+
+}
+
+#skills-panel {
+  dt {
+    float: left;
+    clear: left;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #666;
+  }
+}
+
+#sb-container {
+  height: 100% !important;
 }
